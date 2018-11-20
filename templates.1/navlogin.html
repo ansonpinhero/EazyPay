@@ -1,0 +1,9 @@
+{% if user.is_authenticated %}
+  Hi {{ user.username }}!
+  <li><a href="#"><span class="glyphicon glyphicon-user"></span>Hi {{ user.username }}!</a></li>
+  <li><a href="{% url 'logout' %}"><span class="glyphicon glyphicon-log-out"></span> LogOut</a></li>
+{% else %}
+  <li><a href="#"><span class="glyphicon glyphicon-user"></span>You are not logged in</a></li>
+  <li><a href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+  
+{% endif %}

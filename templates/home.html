@@ -1,0 +1,12 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+{% if user.is_authenticated %}
+  <p>Welcome {{ user.first_name }} {{ user.last_name }} to EazyPay ! </p>
+  <p>Email {{ user.email }}</p>
+  
+{% else %}
+ 
+{% endif %}
+{% endblock %}
