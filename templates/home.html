@@ -1,10 +1,15 @@
 {% extends 'base/base.html' %}
 {% load static %}
 
+{% block breadcrumb %}
+<li class="breadcrumb-item active" aria-current="page">DashBoard</li>
+{% endblock %}
+
 {% block content %}
 {% if user.is_authenticated %}
-  <p>Welcome {{ user.first_name }} {{ user.last_name }} to EazyPay ! </p>
-  <p>Email {{ user.email }}</p>
+  <marquee><p>Welcome {{ user.first_name }} {{ user.last_name }} to EazyPay ! </p>
+  <p>Email {{ user.email }}</p></marquee>
+  
   
 {% else %}
  

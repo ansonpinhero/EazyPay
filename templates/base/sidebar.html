@@ -8,6 +8,15 @@
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'home' %}"><i class="icon-speedometer"></i> Support</a>
             </li>
+            {% if user.is_superuser %}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'signup' %}"><i class="icon-user-follow"></i> Add User</a>
+            </li>
+  
+  
+            {% else %}
+ 
+            {% endif %}
         </ul>
     </nav>
     <button class="sidebar-minimizer brand-minimizer" type="button"></button>
