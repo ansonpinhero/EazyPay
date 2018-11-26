@@ -25,7 +25,7 @@ SECRET_KEY = 'mayl15akw%5&k2paoqr$!mc&a8tb57ppr*z(3z-935c2%7f_@5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['practice-ansonpinhero.c9users.io']
+ALLOWED_HOSTS = ['']
 
 
 # Application definition
