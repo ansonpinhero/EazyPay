@@ -8,8 +8,22 @@
 {% block content %}
 {% if user.is_authenticated %}
   <marquee><p>Welcome {{ user.first_name }} {{ user.last_name }} to EazyPay ! </p>
-  <p>Email {{ user.email }}</p></marquee>
+  </marquee>
+  <h1><u>Profile</u></h1>
+  <p><b>Username</b> :{{ user.username }}</p>
   
+  
+  
+   <p><b>Email</b> :{{ user.email }}</p>
+   <p><b>Last Seen at</b> : {{ user.last_login }}</p>
+   <p><b>Created on</b> : {{ user.date_joined }}</p>
+   <p><b>Department</b> : {{ dept}}</p>
+   <p><b>Job</b> : {{ job_name}}</p>
+   <p><b>Bank Name</b>  : {{ b_name}}</p>
+   <p><b>Bank IFSC</b> : {{ b_ifsc}}</p>
+   <p><b>Bank Account no</b> : {{ b_accno}}</p>
+   
+   <a class="btn btn-block btn-dark" href="{% url 'salaryUser' %}">Get My Salary Details</a>
   
 {% else %}
  

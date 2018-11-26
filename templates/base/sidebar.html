@@ -5,13 +5,22 @@
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'home' %}"><i class="icon-speedometer"></i> Dashboard</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'home' %}"><i class="icon-speedometer"></i> Support</a>
-            </li>
+           
             {% if user.is_superuser %}
-              <li class="nav-item">
+            <li class="nav-item">
                 <a class="nav-link" href="{% url 'signup' %}"><i class="icon-user-follow"></i> Add User</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'bank' %}"><i class="fa fa-file"></i> Add Bank details</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'salary' %}"><i class="fa fa-usd"></i> Payroll</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'job' %}"><i class="fa fa-tasks"></i> Add Designation</a>
+            </li>
+            
   
   
             {% else %}

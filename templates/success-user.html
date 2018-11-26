@@ -1,0 +1,12 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block breadcrumb %}
+<li class="breadcrumb-item active" aria-current="page">Success</li>
+{% endblock %}
+{% block content %}
+<h1>Success</h1>
+<p>You've Successfully added user. </p>
+ <a class="btn btn btn-outline-warning" href="{% url 'bank' %}">Add Bank Details</a>
+  <a class="btn btn btn-outline-warning" href="{% url 'job' %}">Add Job Details</a>
+{% endblock %}

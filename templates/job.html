@@ -1,0 +1,17 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block breadcrumb %}
+<li class="breadcrumb-item active" aria-current="page">DashBoard</li>
+{% endblock %}
+
+{% block content %}
+<form method="post" >
+{% csrf_token %}
+{{form}}
+ 
+<button type="submit" class="btn btn btn-outline-warning">Submit</button>
+   
+
+</form>
+{% endblock %}

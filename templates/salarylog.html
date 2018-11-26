@@ -1,0 +1,44 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block breadcrumb %}
+<li class="breadcrumb-item active" aria-current="page">Salary Log </li>
+{% endblock %}
+
+{% block content %}
+<div class="card-header">
+                    <i class="fa fa-align-justify"></i> Salary Log</div>
+                  <div class="card-body">
+                    <table class="table table-responsive-sm table-sm">
+                      <thead>
+                        <tr>
+                          
+                          <th>First Name</th>
+                          <th>Last Name</th>
+                          <th>Amount</th>
+                          <th>Hours</th>
+                          <th>created_date</th>
+                          <th>month</th>
+                          
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {% for x in log  %}
+                        <tr>
+                          <td>{{x.first }}</td>
+                           <td>{{x.last }}</td>
+                           <td>{{x.amount }}</td>
+                           <td>{{x.hours }}</td>
+                           <td>{{x.created_date }}</td>
+                           <td>{{x.month }}</td>
+                           
+                         
+                        </tr>
+                          
+                        {% endfor %}
+                        
+                      </tbody>
+                    </table>
+                   
+                  </div>
+{% endblock %}
